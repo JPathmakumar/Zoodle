@@ -1,0 +1,149 @@
+.leaderboard {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard-title {
+  margin: 0 0 20px 0;
+  font-size: 24px;
+  color: #333;
+  font-weight: 700;
+  text-align: center;
+}
+
+.leaderboard-empty {
+  text-align: center;
+  padding: 40px 20px;
+  color: #999;
+}
+
+.leaderboard-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.leaderboard-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px;
+  background: #f9f9f9;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  animation: slideIn 0.4s ease;
+}
+
+.leaderboard-item:hover {
+  background: #f0f4ff;
+  transform: translateX(4px);
+}
+
+.leaderboard-item.rank-1 {
+  background: linear-gradient(135deg, rgba(255, 215, 0, 0.1) 0%, rgba(255, 180, 0, 0.1) 100%);
+  border: 2px solid rgba(255, 215, 0, 0.3);
+}
+
+.leaderboard-item.rank-2 {
+  background: linear-gradient(135deg, rgba(192, 192, 192, 0.1) 0%, rgba(169, 169, 169, 0.1) 100%);
+  border: 2px solid rgba(192, 192, 192, 0.3);
+}
+
+.leaderboard-item.rank-3 {
+  background: linear-gradient(135deg, rgba(205, 127, 50, 0.1) 0%, rgba(184, 115, 51, 0.1) 100%);
+  border: 2px solid rgba(205, 127, 50, 0.3);
+}
+
+.leaderboard-rank {
+  font-size: 32px;
+  min-width: 50px;
+  text-align: center;
+}
+
+.leaderboard-player {
+  flex: 1;
+}
+
+.player-name {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: #333;
+}
+
+.player-rank {
+  margin: 4px 0 0 0;
+  font-size: 12px;
+  color: #999;
+}
+
+.leaderboard-score {
+  text-align: right;
+  margin-right: 16px;
+}
+
+.score-label {
+  display: block;
+  font-size: 12px;
+  color: #999;
+  margin-bottom: 4px;
+}
+
+.score-value {
+  display: block;
+  font-size: 24px;
+  font-weight: 700;
+  color: #667eea;
+}
+
+.leaderboard-bar {
+  width: 100px;
+  height: 6px;
+  background: #eee;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.score-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #667eea 0%, #764ba2 100%);
+  border-radius: 3px;
+  transition: width 0.6s ease;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .leaderboard {
+    padding: 16px;
+  }
+
+  .leaderboard-item {
+    padding: 12px;
+    gap: 12px;
+  }
+
+  .leaderboard-rank {
+    font-size: 24px;
+    min-width: 40px;
+  }
+
+  .score-value {
+    font-size: 18px;
+  }
+
+  .leaderboard-bar {
+    width: 60px;
+  }
+}
