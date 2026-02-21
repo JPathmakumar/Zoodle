@@ -1,0 +1,377 @@
+.host-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 20px;
+  animation: fadeIn 0.5s ease;
+}
+
+/* Header */
+.host-header {
+  background: white;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.host-header h1 {
+  flex: 1;
+  text-align: center;
+  color: #333;
+  font-size: 28px;
+}
+
+.back-btn {
+  padding: 10px 16px;
+  background: #f0f0f0;
+  color: #333;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.back-btn:hover {
+  background: #e0e0e0;
+  transform: translateX(-2px);
+}
+
+.game-code {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  min-width: 300px;
+}
+
+.code-label {
+  font-size: 12px;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.code-value {
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  word-break: break-all;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 8px 12px;
+  border-radius: 6px;
+  width: 100%;
+  text-align: center;
+}
+
+.copy-btn {
+  background: white;
+  color: #667eea;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.copy-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Main content */
+.host-content {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 24px;
+}
+
+/* Left panel */
+.left-panel {
+  background: white;
+  padding: 32px;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.5s ease;
+}
+
+.left-panel h2 {
+  color: #333;
+  margin-bottom: 24px;
+  font-size: 24px;
+}
+
+/* Question form */
+.question-form {
+  margin-bottom: 32px;
+}
+
+.question-form input,
+.question-form textarea {
+  margin-bottom: 12px;
+  padding: 12px;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  font-size: 14px;
+}
+
+.question-form input:focus,
+.question-form textarea:focus {
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.points-input {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+  align-items: center;
+}
+
+.points-input label {
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+}
+
+.points-input input {
+  flex: 1;
+  margin: 0;
+}
+
+.add-btn {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.4);
+}
+
+/* Questions list */
+.questions-list {
+  background: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  border-left: 4px solid #667eea;
+}
+
+.questions-list h3 {
+  color: #333;
+  margin-bottom: 16px;
+  font-size: 16px;
+}
+
+.question-item {
+  padding: 10px;
+  background: white;
+  border-radius: 6px;
+  margin-bottom: 8px;
+  color: #555;
+  font-size: 14px;
+  border-left: 3px solid #764ba2;
+}
+
+/* Start/display question buttons */
+.start-btn,
+.next-btn {
+  width: 100%;
+  padding: 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.start-btn:hover,
+.next-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 24px rgba(102, 126, 234, 0.4);
+}
+
+/* Current question display */
+.current-question {
+  animation: slideIn 0.4s ease;
+}
+
+.q-counter {
+  font-size: 12px;
+  color: #999;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+.current-question h2 {
+  color: #333;
+  margin-bottom: 24px;
+  font-size: 24px;
+  line-height: 1.4;
+}
+
+.answers-list {
+  margin-bottom: 24px;
+}
+
+.answer-item {
+  padding: 16px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 12px;
+  color: #333;
+  font-size: 16px;
+  border-left: 4px solid #999;
+}
+
+.answer-item.correct {
+  border-left-color: #4caf50;
+  background: #f1f8f4;
+  color: #2e7d32;
+}
+
+.answer-item.wrong {
+  border-left-color: #f44336;
+  background: #fdebee;
+  color: #c62828;
+}
+
+/* Right panel - Leaderboard */
+.right-panel {
+  background: white;
+  padding: 24px;
+  border-radius: 15px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  animation: slideIn 0.5s ease 0.1s both;
+  height: fit-content;
+  position: sticky;
+  top: 20px;
+}
+
+.right-panel h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.leaderboard {
+  margin-bottom: 24px;
+}
+
+.leaderboard-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  background: #f9f9f9;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  animation: slideIn 0.3s ease;
+}
+
+.leaderboard-row:nth-child(1) .rank {
+  background: #ffd700;
+  color: #333;
+  font-weight: bold;
+}
+
+.leaderboard-row:nth-child(2) .rank {
+  background: #c0c0c0;
+  color: #333;
+  font-weight: bold;
+}
+
+.leaderboard-row:nth-child(3) .rank {
+  background: #cd7f32;
+  color: white;
+  font-weight: bold;
+}
+
+.rank {
+  min-width: 35px;
+  padding: 4px 8px;
+  background: #ddd;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.leaderboard-row .name {
+  flex: 1;
+  color: #333;
+  font-weight: 500;
+}
+
+.leaderboard-row .score {
+  font-weight: 600;
+  color: #667eea;
+  font-size: 16px;
+}
+
+.no-players {
+  text-align: center;
+  color: #999;
+  padding: 20px;
+  font-style: italic;
+}
+
+.game-stats {
+  background: #f0f0f0;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #666;
+}
+
+.game-stats p {
+  margin: 6px 0;
+  font-weight: 500;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .host-content {
+    grid-template-columns: 1fr;
+  }
+
+  .right-panel {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .host-header {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .host-header h1 {
+    font-size: 20px;
+  }
+
+  .left-panel {
+    padding: 20px;
+  }
+}

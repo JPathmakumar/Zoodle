@@ -1,0 +1,516 @@
+/* ============ MAIN CONTAINER ============ */
+.home-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Animated background effect */
+.home-page::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+  border-radius: 50%;
+  top: 10%;
+  right: 10%;
+  animation: float 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.home-page::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, transparent 70%);
+  border-radius: 50%;
+  bottom: 10%;
+  left: 10%;
+  animation: float 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* ============ USER PROFILE ============ */
+.user-profile {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: white;
+  padding: 12px 16px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  animation: slideIn 0.5s ease;
+  z-index: 100;
+  max-width: 90%;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.user-role-icon {
+  font-size: 24px;
+  flex-shrink: 0;
+}
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.user-name {
+  margin: 0;
+  font-weight: 700;
+  color: #333;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.user-role {
+  margin: 0;
+  font-size: 11px;
+  color: #999;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Profile Menu */
+.profile-menu {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.menu-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.menu-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
+}
+
+.menu-btn.logout-btn {
+  background: rgba(244, 67, 54, 0.2);
+  color: #f44336;
+  border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
+.menu-btn.logout-btn:hover {
+  background: rgba(244, 67, 54, 0.3);
+}
+
+.menu-btn.admin-btn {
+  background: rgba(76, 175, 80, 0.2);
+  color: #4caf50;
+  border: 1px solid rgba(76, 175, 80, 0.3);
+}
+
+.menu-btn.admin-btn:hover {
+  background: rgba(76, 175, 80, 0.3);
+}
+
+/* ============ CENTERED CONTAINER ============ */
+.centered-container {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  animation: slideIn 0.5s ease;
+  position: relative;
+  z-index: 10;
+}
+
+/* ============ HEADER ============ */
+.home-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.zoodle-logo {
+  font-size: 48px;
+  margin-bottom: 12px;
+  animation: bounce 2s ease infinite;
+}
+
+.welcome-text {
+  font-size: 16px;
+  color: #666;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* ============ TAB BUTTONS ============ */
+.tab-buttons {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.tab-btn {
+  padding: 12px 16px;
+  background: #f0f0f0;
+  color: #333;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.tab-btn:hover {
+  border-color: #667eea;
+  background: #f8f8ff;
+}
+
+.tab-btn.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  transform: scale(1.05);
+  border-color: transparent;
+}
+
+/* ============ MESSAGES ============ */
+.error-message {
+  background: #fee;
+  border-left: 4px solid #f44;
+  color: #c33;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  animation: slideIn 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.error-icon {
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.error-close {
+  background: none;
+  border: none;
+  color: #c33;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
+  margin-left: auto;
+  flex-shrink: 0;
+}
+
+.error-close:hover {
+  opacity: 0.7;
+}
+
+.success-message {
+  background: #efe;
+  border-left: 4px solid #4caf50;
+  color: #2e7d32;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  animation: slideIn 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.success-icon {
+  font-size: 18px;
+}
+
+/* ============ FORMS ============ */
+.form {
+  animation: slideIn 0.4s ease;
+}
+
+.form h2 {
+  margin-bottom: 24px;
+  color: #333;
+  font-size: 24px;
+  text-align: center;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 6px;
+  font-size: 14px;
+}
+
+.form-input,
+.form-textarea,
+.form-select {
+  width: 100%;
+  padding: 12px;
+  border: 2px solid #eee;
+  border-radius: 8px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  font-family: inherit;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form-input:disabled,
+.form-textarea:disabled,
+.form-select:disabled {
+  background: #f9f9f9;
+  color: #ccc;
+  cursor: not-allowed;
+}
+
+.form-textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+
+.form-select {
+  cursor: pointer;
+}
+
+.form-help {
+  margin: 4px 0 0 0;
+  font-size: 12px;
+  color: #999;
+}
+
+.form-info {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 13px;
+  color: #999;
+}
+
+/* ============ SUBMIT BUTTONS ============ */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  font-weight: 600;
+  font-size: 16px;
+  border-radius: 10px;
+  margin-top: 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.create-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.create-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.join-btn {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.join-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.spinner {
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ============ STUDENT ONLY MESSAGE ============ */
+.student-only-message {
+  background: #f0f4ff;
+  border-left: 4px solid #667eea;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  color: #667eea;
+  font-weight: 600;
+}
+
+.student-only-message p {
+  margin: 8px 0;
+}
+
+/* ============ ANIMATIONS ============ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 600px) {
+  .centered-container {
+    padding: 24px;
+  }
+
+  .zoodle-logo {
+    font-size: 36px;
+  }
+
+  .welcome-text {
+    font-size: 14px;
+  }
+
+  .form h2 {
+    font-size: 20px;
+  }
+
+  .user-profile {
+    position: static;
+    margin-bottom: 20px;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .profile-menu {
+    flex-direction: column;
+    width: 100%;
+    gap: 6px;
+  }
+
+  .menu-btn {
+    width: 100%;
+    padding: 8px 12px;
+  }
+
+  .home-page {
+    flex-direction: column;
+  }
+
+  .tab-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  .tab-btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .centered-container {
+    padding: 16px;
+  }
+
+  .zoodle-logo {
+    font-size: 28px;
+  }
+
+  .form-input,
+  .form-textarea,
+  .form-select {
+    padding: 10px;
+    font-size: 16px; /* Prevents iOS zoom on input */
+  }
+
+  .user-name {
+    font-size: 12px;
+  }
+
+  .user-role {
+    font-size: 10px;
+  }
+}

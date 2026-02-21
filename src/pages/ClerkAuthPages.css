@@ -1,0 +1,328 @@
+/* ============ MAIN PAGE ============ */
+.clerk-auth-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.5s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Background decorations */
+.clerk-auth-page::before {
+  content: '';
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  top: 10%;
+  right: 10%;
+  animation: float 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+.clerk-auth-page::after {
+  content: '';
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+  border-radius: 50%;
+  bottom: 10%;
+  left: 10%;
+  animation: float 8s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* ============ CONTAINER ============ */
+.clerk-auth-container {
+  width: 100%;
+  max-width: 450px;
+  animation: slideIn 0.5s ease;
+  position: relative;
+  z-index: 10;
+}
+
+/* ============ HEADER ============ */
+.clerk-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.clerk-logo {
+  font-size: 48px;
+  margin-bottom: 12px;
+  animation: bounce 2s ease infinite;
+  line-height: 1;
+}
+
+.clerk-subtitle {
+  font-size: 24px;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 6px;
+  line-height: 1.2;
+}
+
+.clerk-description {
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 400;
+  margin: 0;
+}
+
+/* ============ CLERK ROOT ============ */
+.clerk-root {
+  width: 100%;
+}
+
+.clerk-card {
+  background: white !important;
+  border-radius: 20px !important;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3) !important;
+  padding: 40px !important;
+  border: none !important;
+}
+
+/* ============ HEADER ELEMENTS ============ */
+.clerk-header-title {
+  font-size: 0 !important;
+  height: 0 !important;
+  display: none !important;
+  visibility: hidden !important;
+}
+
+.clerk-header-subtitle {
+  font-size: 0 !important;
+  height: 0 !important;
+  display: none !important;
+  visibility: hidden !important;
+}
+
+/* ============ FORM ELEMENTS ============ */
+.clerk-input {
+  border: 2px solid #eee !important;
+  border-radius: 8px !important;
+  padding: 12px 14px !important;
+  font-size: 14px !important;
+  transition: all 0.3s ease !important;
+  background: white !important;
+  color: #333 !important;
+  font-family: inherit !important;
+}
+
+.clerk-input:focus {
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1) !important;
+  outline: none !important;
+}
+
+.clerk-input::placeholder {
+  color: #aaa !important;
+}
+
+/* ============ BUTTONS ============ */
+.clerk-btn-primary {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  color: white !important;
+  font-weight: 600 !important;
+  border-radius: 8px !important;
+  padding: 12px 16px !important;
+  transition: all 0.3s ease !important;
+  width: 100% !important;
+  border: none !important;
+  cursor: pointer !important;
+  font-size: 14px !important;
+  font-family: inherit !important;
+}
+
+.clerk-btn-primary:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4) !important;
+}
+
+.clerk-btn-primary:active {
+  transform: translateY(0) !important;
+}
+
+.clerk-btn-primary:disabled {
+  opacity: 0.6 !important;
+  cursor: not-allowed !important;
+}
+
+/* ============ SOCIAL BUTTONS ============ */
+.clerk-social-btn {
+  border: 2px solid #eee !important;
+  border-radius: 8px !important;
+  padding: 12px 16px !important;
+  transition: all 0.3s ease !important;
+  background: white !important;
+  cursor: pointer !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
+  font-family: inherit !important;
+  width: 100% !important;
+}
+
+.clerk-social-btn:hover {
+  border-color: #667eea !important;
+  background: #f0f4ff !important;
+  transform: translateY(-2px) !important;
+}
+
+.clerk-social-btn:active {
+  transform: translateY(0) !important;
+}
+
+.clerk-social-text {
+  color: #333 !important;
+  font-weight: 500 !important;
+}
+
+/* ============ DIVIDER ============ */
+.clerk-divider-line {
+  background: #eee !important;
+  height: 1px !important;
+}
+
+.clerk-divider-text {
+  color: #999 !important;
+  font-size: 13px !important;
+  font-weight: 500 !important;
+  background: white !important;
+  padding: 0 8px !important;
+}
+
+/* ============ LINKS ============ */
+.clerk-footer-link {
+  color: #667eea !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  transition: color 0.3s ease !important;
+}
+
+.clerk-footer-link:hover {
+  color: #764ba2 !important;
+  text-decoration: underline !important;
+}
+
+.clerk-resend-link {
+  color: #667eea !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  transition: color 0.3s ease !important;
+}
+
+.clerk-resend-link:hover {
+  color: #764ba2 !important;
+}
+
+/* ============ FORM FIELDS ============ */
+.clerk-formFieldInput,
+.clerk-formField__input {
+  border: 2px solid #eee !important;
+  border-radius: 8px !important;
+  padding: 12px 14px !important;
+  font-size: 14px !important;
+  transition: all 0.3s ease !important;
+}
+
+.clerk-formFieldInput:focus,
+.clerk-formField__input:focus {
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1) !important;
+}
+
+/* ============ ANIMATIONS ============ */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* ============ RESPONSIVE ============ */
+@media (max-width: 600px) {
+  .clerk-card {
+    padding: 24px !important;
+  }
+
+  .clerk-logo {
+    font-size: 36px;
+  }
+
+  .clerk-subtitle {
+    font-size: 18px;
+  }
+
+  .clerk-description {
+    font-size: 12px;
+  }
+
+  .clerk-input {
+    padding: 11px 12px !important;
+    font-size: 16px !important;
+  }
+
+  .clerk-btn-primary {
+    padding: 11px 14px !important;
+    font-size: 15px !important;
+  }
+}
+
+@media (max-width: 400px) {
+  .clerk-auth-container {
+    width: 100%;
+  }
+
+  .clerk-card {
+    padding: 20px !important;
+  }
+
+  .clerk-logo {
+    font-size: 28px;
+  }
+
+  .clerk-subtitle {
+    font-size: 16px;
+  }
+
+  .clerk-description {
+    font-size: 11px;
+  }
+}
